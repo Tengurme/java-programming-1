@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>La Tibet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bankwebsite">
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+hr {
+    border: none;
+    height: 3px;
+    color: #333; /* old IE */
+    background-color: red; /* Modern Browsers */
+}
+.footer{
+  position: relative;
+  height: 150px;
+  clear: both;
+}
+.fr{
+  background-color: blue;
+  margin: 20px 20px;
+}
+.la{
+  background-color: grey;
+  height: 100px;
+}
+.w3-display-container mySlides{
+  width: 500px;
+  height:400px;
+  align-items: center;
+  border-color: grey;
+}
+.mySlides {display:none;}
+.topnav {
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+.table {
+  margin: 80px;
+}
+
+
+.topnav a {
+  float: left;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #576675;
+  color: white;
+}
+.le{
+  float: right;
+}
+
+.mid{
+  height: 70px;
+  background-color: grey;
+}
+</style>
+</head>
+<h1 style="font-family:verdana"> La Tibet | Openings</h1>
+<hr>
+<body>
+  <div class="topnav">
+    <div class="a">
+      <center>
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/home.html">Home</a>
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Menu.html">Menu</a>
+        <a class="active" href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Openings.html">Openings</a>
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Recipes.html">Recipes</a>
+        <div class="le">
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Contact.html">Contact Us</a>
+        </div>
+  </center></div>
+  </div>
+  <div class="w3-display-container" style="max-width:100%"><center>
+    <img class="mySlides" src="./home/open.jpeg" style="width: 90%; height: 70vh; display: block;">
+    <img class="mySlides" src="./home/open1.jpeg" style="width: 90%; height: 70vh; display: block;">
+    <img class="mySlides" src="./home/open3.jpg" style="width: 90%; height: 70vh; display: block;">
+    <img class="mySlides" src="./home/open2.jpg" style="width: 90%; height: 70vh; display: block;">
+
+  <div class="mid">
+  <hr>
+  </div><hr>
+<table border=1 cellspacing="0" style="width:70%">
+
+<tr>
+ <th colspan="7"> Time Table </th>
+</tr>
+
+<tr>
+ <th>        </th>
+ <th> Monday </th>
+ <th> Tuesday </th>
+ <th> Wednesday </th>
+ <th> Thrusday </th>
+ <th> Friday </th>
+ <th> Saturday </th>
+</tr>
+<tr>
+  <td rowspan="3"> day </td>
+  <td> 9:00 am </td>
+  <td> 9:00 am</td>
+  <td> 9:00 am</td>
+  <td> 9:00 am </td>
+  <td> 9:00 am </td>
+  <td> 10:00 am </td>
+</tr>
+
+<tr>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+</tr>
+
+<tr>
+  <td> 11:00 am </td>
+  <td> 11:00 am</td>
+  <td> 11:00 am</td>
+  <td> 11:00 am </td>
+  <td> 11:00 am </td>
+  <td> 11:00 am </td>
+</tr>
+<tr>
+  <td rowspan="3"> Afternoon </td>
+  <td> 1:00 pm </td>
+  <td> 1:00 pm</td>
+  <td> 1:00 pm</td>
+  <td> 1:00 pm </td>
+  <td> 1:00 pm </td>
+  <td> 1:00 pm </td>
+</tr>
+
+<tr>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+  <td> to </td>
+</tr>
+
+<tr>
+  <td> 10:00 pm </td>
+  <td> 10:00 pm</td>
+  <td> 10:00 pm</td>
+  <td> 10:00 pm </td>
+  <td> 10:00 pm </td>
+  <td> 11:00 pm </td>
+</tr>
+
+</table>
+
+
+  </center></div>
+  <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
+
+  <footer class="footer">
+    <div class="la"><p><img src="./home/wall4.png" align="left" width="180px" height="100px" style="margin:0 10px"><br>
+    </p><center>Privacy | Security | Disclosures | Calculators | Site Map | Home</center><p></p></div>
+  </footer>
+
+</body>
+</html>

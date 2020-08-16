@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>La Tibet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bankwebsite">
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+hr {
+    border: none;
+    height: 2px;
+    color: #333; /* old IE */
+    background-color: black; /* Modern Browsers */
+}
+.footer{
+  position: relative;
+  height: 150px;
+  clear: both;
+}
+.la{
+  background-color: grey;
+  height: 100px;
+}
+.w3-display-container mySlides{
+  width: 500px;
+  height:400px;
+  align-items: center;
+  border-color: grey;
+}
+.mySlides {display:none;}
+.topnav {
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+.table {
+  margin: 80px;
+}
+
+
+.topnav a {
+  float: left;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #576675;
+  color: white;
+}
+.le{
+  float: right;
+}
+
+.mid{
+  height: 50px;
+  background-color: #576675;
+}
+
+</style>
+</head>
+<h1 style="font-family:verdana"> La Tibet | Home</h1>
+<hr>
+<body>
+  <div class="topnav">
+    <div class="a">
+      <center>
+        <a class="active" href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/home.html">Home</a>
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Menu.html">Menu</a>
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Openings.html">Openings</a>
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Recipes.html">Recipes</a>
+        <div class="le">
+        <a href="file:///Users/tenzingurme/Documents/Programs/Queue/C++/html/Contact.html">Contact Us</a>
+        </div>
+  </center></div>
+  </div>
+  <div class="w3-display-container" style="max-width:100%"><center>
+    <img class="mySlides" src="./home/home2.jpg" style="width: 90%; height: 70vh; display: block;">
+    <img class="mySlides" src="./home/home3.jpg" style="width: 90%; height: 70vh; display: block;">
+    <img class="mySlides" src="./home/home1.jpg" style="width: 90%; height: 70vh; display: block;">
+    <img class="mySlides" src="./home/home4.jpg" style="width: 90%; height: 70vh; display: block;">
+    <img class="mySlides" src="./home/home5.jpg" style="width: 90%; height: 70vh; display: block;">
+  </center></div>
+  <div class="mid">
+  <hr>
+  </div><hr>
+  <table class="table" width="80%" cellspacing="10">
+    <tbody><tr>
+      <td><img src="./home/wall1.jpg" width="570px" height="250"></td>
+      <td><b>Asian cuisine includes several major regional cuisines: Central Asian, East Asian, North Asian, South Asian, Southeast Asian, and West Asian. A cuisine is a characteristic style of cooking practices and traditions,usually associated with a specific culture. Asia, being the largest and most populous continent, is home to many cultures, many of which have their own characteristic cuisine.</b></td>
+    </tr>
+    <tr>
+      <td><b>Ingredients common to many cultures in the East and Southeast regions of the continent include rice, ginger, garlic, sesame seeds, chilies, dried onions, soy, and tofu. Stir frying, steaming, and deep frying are common cooking methods.While rice is common to most Asian cuisines, different varieties are popular in the various regions. Basmati rice is popular in the Indian subcontinent, Jasmine rice is often found across Southeast Asia, while long-grain rice is popular in China and short-grain in Japan and Korea.</b></td>
+      <td><img src="./home/wall2.jpg" width="570px" height="250"></td>
+    </tr>
+    <tr>
+      <td><img src="./home/wall3.jpg" width="570px" height="250"></td>
+      <td><b>Curry is a common dish in South Asia, Southeast Asia, and East Asia. Curry dishes have their origins in the Indian subcontinent. With present-day Northern India, Bangladesh, and Pakistan mainly using a yogurt base, while those in present-day Southern India, Sri Lanka, and Southeast Asia generally use coconut milk as their foundation</b></td>
+    </tr>
+  </tbody></table>
+  <footer class="footer">
+    <div class="la"><p><img src="./home/wall4.png" align="left" width="180px" height="100px" style="margin:0 10px"><br>
+    </p><center>Privacy | Security | Disclosures | Calculators | Site Map | Home</center><p></p></div>
+  </footer>
+
+
+
+  <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+
+<!--html basics -->
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+    <script>
+      var stateObject = {
+"India": { "Delhi": ["new Delhi", "North Delhi"],
+"Kerala": ["Thiruvananthapuram", "Palakkad"],
+"Goa": ["North Goa", "South Goa"],
+},
+"Australia": {
+"South Australia": ["Dunstan", "Mitchell"],
+"Victoria": ["Altona", "Euroa"]
+}, "Canada": {
+"Alberta": ["Acadia", "Bighorn"],
+"Columbia": ["Washington", ""]
+},
+}
+      window.onload = function () {
+var countySel = document.getElementById("countySel"),
+stateSel = document.getElementById("stateSel"),
+districtSel = document.getElementById("districtSel");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+    </script>
+	</head>
+	<body>
+    <div id='container'>
+      <div id='header'>
+        <sup><a href=#>Home</a></sup>
+        <h3>rediff.<span style="color:#B40404;">com</span></h3>
+        <hr>
+        <br>
+
+        <form action="abc.html">
+
+    		<table border="0" width="80%">
+          <tr>
+            <td colspan="3">
+              <font face = "arial" size = "5">Create a Rediffmail account</font>
+            </td>
+          </tr>
+    			<tr>
+    				<td>Full Name :</td>
+    				<td> <input type="text"/> </td>
+            <td><font face = "arial" size = "1" color="#A4A4A4">Enter your first name & last name<br>
+                Eg. Sameer Bhagwat</font></td>
+    			</tr>
+          <tr>
+    				<td>Choose a Rediffmail ID :</td>
+    				<td> <input type="text"/> </td>
+            <td>@rediffmail.com</td>
+    			</tr>
+          <tr>
+    				<td> </td>
+    				<td> <button type="button">Check availability</button> </td>
+    			</tr>
+    			<tr>
+    				<td>Password :</td>
+    				<td> <input type="password"/> </td>
+            <td rowspan="4"><font face = "arial" size = "1" color="#A4A4A4">
+              Password:
+              <ul>
+                <li>must contain 6-12 characters</li>
+                <li>must contain both upper and lower case characters</li>
+                <li>must contain numeric characters</li>
+                <li>must contain special characters</li>
+                <li>should not contain username or firstname or lastname</li>
+              </ul>
+              If you forget your password,<br>
+              we will send it to this account.<br>
+            </td>
+    			</tr>
+          <tr>
+    				<td>Retype password :</td>
+    				<td> <input type="password"/> </td>
+    			<tr>
+          <tr>
+      			<td>Alternate Email Address :</td>
+      			<td> <input type="email"/> </td>
+      		<tr>
+          <tr>
+            <td></td>
+            <td><font size ="2"><input type="checkbox" id="check" name="check1" value="Yes"><label for="check1"> Click if you don't have an alternate ID
+            </label><br></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Mobile N.o. :</td>
+            <td>
+              <select id="Num" name="Num">
+                <option value="91">India(+91)</option>
+                <option value="1">USA/Canada(+1)</option>
+                <option value="44">United Kingdom(+44)</option>
+                <option value="93">Afghanistan(+93)</option>
+                <option value="355">Alabia(+93)</option>
+                <option value="22">Algeria(+22)</option>
+                <option value="35">Australia(+35)</option>
+              </select>
+              <input type="text" name="Number" id="num">
+            </td>
+            <td><font face = "arial" size = "1" color="#A4A4A4">If you forget your password,<br>
+                recover your password via text message.</font></td>
+          </tr>
+    		  <tr>
+    				<td>Date of Birth :</td>
+    				<td>
+              <select name='day' id='dayddl'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+                <option value='17'>17</option>
+                <option value='18'>18</option>
+                <option value='19'>19</option>
+                <option value='20'>20</option>
+                <option value='21'>21</option>
+                <option value='22'>22</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+                <option value='31'>31</option>
+              </select>
+              <select name='month' id='monthddl'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+              </select>
+              <select name='day' id='blah'>
+                <option value='1947'>1947</option>
+<option value='1948'>1948</option>
+<option value='1949'>1949</option>
+<option value='1950'>1950</option>
+<option value='1951'>1951</option>
+<option value='1952'>1952</option>
+<option value='1953'>1953</option>
+<option value='1954'>1954</option>
+<option value='1955'>1955</option>
+<option value='1956'>1956</option>
+<option value='1957'>1957</option>
+<option value='1958'>1958</option>
+<option value='1959'>1959</option>
+<option value='1960'>1960</option>
+<option value='1961'>1961</option>
+<option value='1962'>1962</option>
+<option value='1963'>1963</option>
+<option value='1964'>1964</option>
+<option value='1965'>1965</option>
+<option value='1966'>1966</option>
+<option value='1967'>1967</option>
+<option value='1968'>1968</option>
+<option value='1969'>1969</option>
+<option value='1970'>1970</option>
+<option value='1971'>1971</option>
+<option value='1972'>1972</option>
+<option value='1973'>1973</option>
+<option value='1974'>1974</option>
+<option value='1975'>1975</option>
+<option value='1976'>1976</option>
+<option value='1977'>1977</option>
+<option value='1978'>1978</option>
+<option value='1979'>1979</option>
+<option value='1980'>1980</option>
+<option value='1981'>1981</option>
+<option value='1982'>1982</option>
+<option value='1983'>1983</option>
+<option value='1984'>1984</option>
+<option value='1985'>1985</option>
+<option value='1986'>1986</option>
+<option value='1987'>1987</option>
+<option value='1988'>1988</option>
+<option value='1989'>1989</option>
+<option value='1990'>1990</option>
+<option value='1991'>1991</option>
+<option value='1992'>1992</option>
+<option value='1993'>1993</option>
+              </select>
+              </td>
+            <td>
+    				</td>
+    			</tr>
+    		  <tr>
+    				<td>Gender </td>
+            <td>
+    					<input type="radio" value="aa"/> Male
+    					<input type="radio" value="aa"/> Female
+    				</td>
+            <td>
+            </td>
+    			</tr>
+    			<tr>
+    				<td>Country I live in  </td>
+    				<td><select name="state" id="countySel" size="1">
+              <option value="" selected="selected">Select Country</option>
+            </select></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>City </td>
+            <td><select name="countrya" id="stateSel" size="1">
+<option value="" selected="selected">Please select Country first</option>
+</select></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><img style="border:2px solid black" src='download.jpeg'></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><input type="text" name="cap" value=""></td>
+            <td></td>
+          </tr>
+
+
+    			<tr>
+    				<td colspan="3" align="center">
+    				<button type="button" class="button">Create My Account >></button>
+    				</td>
+    			</tr>
+
+    		</table>
+
+
+    		</form>
+      </div><!--end of head-->
+
+
+
+    </div>
+
+	</body>
+</html>
